@@ -2,25 +2,34 @@
 <head>
 <title>DyLoc</title>
   <style>
-    .log-holder{
-        
+    .logo-holder{
+        position: absolute;
+        top:30%;
         width:100%;
-        height:500px;
+        height:300px;
         text-align: center;
     }
     .arena{
-      background-color: #eee;
+        width:300px;
+        height:300px;
+        background-color: #eee;
+        margin:auto;
+        border-radius: 10px;
+        vertical-align: middle;
     }
     .font-helve {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 24px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 500;
-      line-height: 26.4px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 500;
+        line-height: 26.4px;
     }
     .eye{
       fill: greenyellow;
+    }
+    .svg{
+      margin-top:100px;
     }
   </style>  
   <script type="text/javascript">
@@ -30,17 +39,16 @@
   </script>
 </head>
 <body>
-  <div class="log-holder">
-    <div class='font-helve'>DON'T BLINK EYES</div>
+  <div class="logo-holder">
     <div class='arena'>
-      <svg width="120" height="120" viewBox="0 0 120 120"
+      <svg class="svg" width="120" height="120" viewBox="0 0 120 120"
         xmlns="http://www.w3.org/2000/svg">
         <!--head-->
         <rect x="21" y="21" height="18" width="18" class="head" />
         <!--eyes-->
         <defs>
-          <g id="eye">
-            <rect  width="4" height="3" class="eye">
+         
+            <rect id="eye"  width="4" height="3" class="eye">
               <animate attributeType="XML"
                 attributeName="height"
                 from="3" to="0"
@@ -50,7 +58,7 @@
                 keyTimes="0; 0.05; 0.06; 1"
                 repeatCount="indefinite">
             </rect>
-          </g>
+         
         </defs>
         <use href="#eye" x="22" y="30"/>
         <use href="#eye" x="31" y="30"/>
