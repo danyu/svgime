@@ -1,0 +1,32 @@
+<div class="logo-holder">
+    <div class='arena'>
+      <svg class="svg" width="120" height="120" viewBox="0 0 120 120"
+        xmlns="http://www.w3.org/2000/svg">
+        <!--head-->
+        <rect x="21" y="21" height="18" width="18" class="head" />
+        <!--eyes-->
+        <defs>
+         
+            <rect id="eye"  width="4" height="3" class="eye">
+              <animate attributeType="XML"
+                attributeName="height"
+                from="3" to="0"
+                dur="3.5s"
+                fill="remove"
+                values="3; 0; 3; 3"
+                keyTimes="0; 0.05; 0.06; 1"
+                repeatCount="indefinite">
+            </rect>
+         
+        </defs>
+        <use href="#eye" x="22" y="30"/>
+        <use href="#eye" x="31" y="30"/>
+        <!--body-->
+        <rect class="body" x="25" y="42" height="10" width="10" />
+        <!--limbs-->
+        <polygon points="20,45 25,45 20,55 15,55" class="left-arm"/>
+        <polygon points="35,45 40,45 45,55 40,55" class="right-arm"/>
+        <polygon points="23,55 28,55 23,65 18,65" class="left-leg"/>
+        <polygon points="32,55 37,55 42,65 37,65" class="right-leg"/>
+        
+      </svg>
