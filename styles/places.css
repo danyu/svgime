@@ -1,0 +1,9 @@
+.globe{
+    stroke: #ffddaa;
+    fill: #ffdd88;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+   }

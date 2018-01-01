@@ -3,16 +3,36 @@
 <script src="scripts/lodash.core.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="app/app.js"></script>
+<script src="app/map/lazyLoadMapService.js"></script>
+<script src="app/map/googleMapDirective.js"></script>
+<script >
+
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="styles/droid.css">
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<link rel="stylesheet" type="text/css" href="styles/places.css">
 <title>DyouPortal</title>
   
 </head>
-<body ng-app="dyApp" ng-controller="dyAppCtrl">
-  <div>
-    <button ng-repeat="t in tpls" ng-click="updateContent(t.name)">{{t.name}}</button>
+<body ng-app="dyApp" >
+  <!--<div>
+    <button ng-repeat="t in navs" ng-click="updateContent(t.name)">{{t.name}}</button>
+  </div>-->
+  <div ng-controller="dyAppCtrl">
+      
+    <!-- <svg class="nav-circle" height="60" width="60" ng-repeat="t in navs" ng-click="updateContent(t.name)">
+        <circle cx="30" cy="30" r="25" stroke="red" stroke-width="1" fill="white"></circle>
+    </svg> -->
+    <span class=" " height="60" width="60" ng-repeat="t in navs" ng-click="updateContent(t.name)">
+         {{t.name}}
+    </span>
+    <div class="slide-animate-container" ng-repeat="t in navs">
+      <div class="slide-animate" ng-include="t.url" ng-show="t.visible"></div>
     </div>
-  <div class="slide-animate-container">
-    <div class="slide-animate" ng-include="curTpl"></div>
+    <!-- <div id="map" class="google-map-loader"></div> -->
   </div>
+  
 </body>
 </html>
