@@ -2,8 +2,13 @@
     stroke: #ffddaa;
     fill: #ffdd88;
 }
-
+.map-table{
+    width:100%;
+}
+.map-table td:nth-child(1){
+    width:75%;
+}
 #map {
-    height: 500px;
+    height: 600px;
     width: 100%;
    }
